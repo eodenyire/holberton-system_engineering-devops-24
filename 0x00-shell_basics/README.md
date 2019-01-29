@@ -4,4 +4,5 @@
 2-bring_me_home this file execute cd linux command without arguments
 3-listfiles this file execute ls linux command with 2 argument l and A
 4-listmorefiles this file execute ls linux command with 2 argument l and a
-5-listfilesdigitonly this file execute ls linux command with 4 args l, a, n and --ignore
+#fit 5-listfilesdigitonly this file execute ls linux command with 3 args l, n and --ignore
+6-firstdirectory this file execute mkdir linux command with 1 arg
