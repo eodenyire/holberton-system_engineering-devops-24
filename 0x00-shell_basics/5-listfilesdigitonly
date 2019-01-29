@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan --ignore='.'
+ls -lan --ignore='.*'
