@@ -8,3 +8,4 @@
 6-firstdirectory this file execute mkdir linux command with 1 arg
 7-movethatfile this file execute mv linux command with 2 args
 8-firstdelete this file execute rm linux command with 1 arg
+9-firstdirdeletion this file execute rmdir linux command with 1 arg
