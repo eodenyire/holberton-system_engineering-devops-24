@@ -6,3 +6,5 @@
 4-listmorefiles this file execute ls linux command with 2 argument l and a
 #fit 5-listfilesdigitonly this file execute ls linux command with 3 args l, n and --ignore
 6-firstdirectory this file execute mkdir linux command with 1 arg
+7-movethatfile this file execute mv linux command with 2 args
+8-firstdelete this file execute rm linux command with 1 arg
