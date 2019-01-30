@@ -13,3 +13,5 @@
 #fit 11-lists this file execute ls linux command with 2 args a, U and d
 12-file_type this file execute type linux command with 1 arg
 13-symbolic_link this file execute ln linux command with 3 args -s file_symbolic file
+14-copy_html this file execute cp linux command with 1 arg u
+15-lets_move this file execute mv linux command with 1 arg [[:upper:]]*
