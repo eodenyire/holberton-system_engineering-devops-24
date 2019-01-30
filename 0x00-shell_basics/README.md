@@ -15,3 +15,7 @@
 13-symbolic_link this file execute ln linux command with 3 args -s file_symbolic file
 14-copy_html this file execute cp linux command with 1 arg u
 15-lets_move this file execute mv linux command with 1 arg [[:upper:]]*
+16-clean_emacs this file execute rm linux command with 2 arg *~
+17-tree this file execute mkdir linux command with 1 arg -p and 1 parameter for the same  
+18-commas this file execute ls linux command with 5 args (apSmv)
+
