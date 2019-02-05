@@ -1,4 +1,2 @@
 #!/bin/bash
-t=0;l=$((${#BINARY}-1));a=${BINARY};for((i=0;i<${#a};i++));do t="$((t+$((${a:$i:1}*$((2**$((l-i))))))))"; done; echo $t;
-
-
+echo $((2#$BINARY))
