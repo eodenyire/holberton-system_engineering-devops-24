@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# show process and filter word
+ps -axu | grep bash
