@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+sudo nano /etc/ssh/sshd_config
+PasswordAuthentication no
+sudo service ssh restart
