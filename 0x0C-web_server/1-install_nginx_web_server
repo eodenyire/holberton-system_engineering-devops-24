@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# a script that downloads nginx
+sudo apt-get update
+sudo apt-get install -y nginx
+chmod u+x /usr/share/nginx/html/index.html
+echo "Holberton School for the win!" | sudo tee -a /usr/share/nginx/html/index.html
