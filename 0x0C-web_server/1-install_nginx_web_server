@@ -2,5 +2,5 @@
 # a script that downloads nginx
 sudo apt-get update
 sudo apt-get install -y nginx
-chmod u+x /usr/share/nginx/html/index.html
-echo "Holberton School" | sudo tee -a /usr/share/nginx/html/index.html
+chmod u+x /var/www/html/index.html
+echo "Holberton School" | sudo tee -a /var/www/html/index.html
