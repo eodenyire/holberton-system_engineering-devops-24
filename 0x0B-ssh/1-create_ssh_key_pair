@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh-keygen -t rsa -b 4096 -f holberton -N "holberton"
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/holberton -N "betty"
