@@ -3,4 +3,4 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 chmod u+x /var/www/html/index.html
-echo "Holberton School" | sudo tee -a /var/www/html/index.html
+echo "Holberton School" | sudo tee /var/www/html/index.html
