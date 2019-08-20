@@ -1,0 +1,5 @@
+#!/usr/bin/bash env
+#  listen port 80 with nginx server
+sudo ls -sf /etc/nginx/server-available/default /etc/nginx/server-enabled/default
+sudo /etc/init.d/nginx restart
+sudo killall nginx
