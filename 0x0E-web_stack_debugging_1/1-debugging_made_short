@@ -1,5 +1,5 @@
-#!/usr/bin/bash env
-#  listen port 80 with nginx server
+#!/usr/bin/env bash
+#listen port 80 with nginx server
 sudo sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
 sudo pkill nginx
