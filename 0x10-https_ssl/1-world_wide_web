@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# list all subdomains
+list_subdomains=("www" "lb-01" "web-01" "web-02")
+info_subdomain() {
+    record=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf "%s", $4}')
+    ip=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{printf "%s", $5}')
+    printf "The subdomain %s is a %s record and points to %s\n" "$2" "$record" "$ip" 
+}
+
+
+if [ -z "$2" ]; then
+    for subdomain in "${list_subdomains[@]}";
+    do
+	info_subdomain "$1" "$subdomain"
+    done
+else
+    info_subdomain "$1" "$2"
+fi
