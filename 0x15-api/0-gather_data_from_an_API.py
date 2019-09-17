@@ -2,6 +2,7 @@
 """
 0. Gather data from an API
 """
+import json
 import requests
 import sys
 
