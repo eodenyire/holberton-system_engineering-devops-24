@@ -6,26 +6,23 @@ import requests
 import sys
 
 def getrequest():
-    text1 = "Employee {} is done with tasks({}/{}):"
-    url1 = 'https://jsonplaceholder.typicode.com/users/{}'
-    url2 = 'https://jsonplaceholder.typicode.com/todos'
-    users = requests.get(url1.format(sys.argv[1]))
-    names = users.json().get('name')
-    todos = requests.get(url2)
-    todos = todos.json()
-    i = 0
-    titles = []
-    total = 0
-    for todo in todos:
-        if todo['userId'] == int(sys.argv[1]):
-            if todo['completed'] is True:
-                i += 1
-                titles.append(todo['title'])
-            total += 1
-    print(text1.format(names, i, total))
-    for title in titles:
-        print('\t ', end="")
-        print(title)
+    userId = sys.argv[1]
+    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
+                        format(userId), verify=False).json()
+    todo = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
+                        format(userId), verify=False).json()
+    username = user.get('username')
+    tasks = []
+    for task in todo:
+        task_dict = {}
+        task_dict["task"] = task.get('title')
+        task_dict["completed"] = task.get('completed')
+        task_dict["username"] = username
+        tasks.append(task_dict)
+    jsonobj = {}
+    jsonobj[userId] = tasks
+    with open("{}.json".format(userId), 'w') as jsonfile:
+        json.dump(jsonobj, jsonfile)
 
 
 if __name__ == "__main__":
