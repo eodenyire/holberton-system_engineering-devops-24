@@ -7,6 +7,7 @@ import csv
 import requests
 import sys
 
+
 def getrequest():
     url1 = 'https://jsonplaceholder.typicode.com/users/{}'
     url2 = 'https://jsonplaceholder.typicode.com/todos?userId={}'
