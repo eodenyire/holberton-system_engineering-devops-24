@@ -3,29 +3,20 @@
 0. Gather data from an API
 """
 import requests
+import csv
 import sys
 
 def getrequest():
-    text1 = "Employee {} is done with tasks({}/{}):"
-    url1 = 'https://jsonplaceholder.typicode.com/users/{}'
-    url2 = 'https://jsonplaceholder.typicode.com/todos'
-    users = requests.get(url1.format(sys.argv[1]))
-    names = users.json().get('name')
-    todos = requests.get(url2)
-    todos = todos.json()
-    i = 0
-    titles = []
-    total = 0
-    for todo in todos:
-        if todo['userId'] == int(sys.argv[1]):
-            if todo['completed'] is True:
-                i += 1
-                titles.append(todo['title'])
-            total += 1
-    print(text1.format(names, i, total))
-    for title in titles:
-        print('\t ', end="")
-        print(title)
+    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".
+                        format(userId), verify=False).json()
+    todo = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
+                        format(userId), verify=False).json()
+    with open("{}.csv".format(userId), 'w', newline='') as csvfile:
+        taskwriter = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        for task in todo:
+            taskwriter.writerow([int(userId), user.get('username'),
+                                 task.get('completed'),
+                                 task.get('title')])
 
 
 if __name__ == "__main__":
