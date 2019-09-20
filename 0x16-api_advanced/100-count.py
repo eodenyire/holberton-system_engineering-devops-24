@@ -19,7 +19,7 @@ def count_words(subreddit, word_list, key=""):
         return 0
     about = about.json()
     if about["kind"] == "Listing":
-        #for data in about["data"]["children"]:
+        # for data in about["data"]["children"]:
             # print(data["data"]["title"])
         for word in word_list:
             print('{}: {}'.format(word, 0))
