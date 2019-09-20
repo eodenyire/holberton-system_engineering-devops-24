@@ -13,12 +13,12 @@ def top_ten(subreddit):
     headers = {"User-Agent": "APILearning"}
     url = "http://reddit.com/r/{}/hot.json?limit=10"
     about = r.get(url.format(subreddit), headers=headers)
-
     if about.status_code != 200:
+        print(None)
         return 0
     about = about.json()
     if about["kind"] == "Listing":
         for data in about["data"]["children"]:
             print(data["data"]["title"])
     else:
-        return 0
+        print(None)
