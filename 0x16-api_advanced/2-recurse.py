@@ -28,4 +28,5 @@ def recurse(subreddit, hot_list=[]):
         if type(hot_list) == dict:
             hot_list = {}
             hot_list.append(hot_list[0]["data"]["title"])
+            recurse(None)
     return hot_list
