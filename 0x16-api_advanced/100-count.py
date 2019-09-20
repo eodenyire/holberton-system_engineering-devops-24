@@ -22,6 +22,6 @@ def count_words(subreddit, word_list, key=""):
         #for data in about["data"]["children"]:
             # print(data["data"]["title"])
         for word in word_list:
-            print('{}: {}'.format(word, 10))
+            print('{}: {}'.format(word, 0))
     else:
         print(None)
