@@ -1,4 +1,4 @@
-0x00-shell_basics
+#0x00-shell_basics
 0-current_working_directory this file execute pwd linux command 
 1-listit this file execute ls linux command
 2-bring_me_home this file execute cd linux command without arguments
@@ -18,4 +18,7 @@
 16-clean_emacs this file execute rm linux command with 2 arg *~
 17-tree this file execute mkdir linux command with 1 arg -p and 1 parameter for the same  
 18-commas this file execute ls linux command with 5 args (apSmv)
+
+###Authors
+Fesus Rocuts <https://github.com/fesusrocuts>
 

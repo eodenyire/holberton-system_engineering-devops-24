@@ -1,1 +1,5 @@
-0x0C. Web server
+# 0x0C. Web server
+
+### Authors
+Fesus Rocuts <https://github.com/fesusrocuts>
+
