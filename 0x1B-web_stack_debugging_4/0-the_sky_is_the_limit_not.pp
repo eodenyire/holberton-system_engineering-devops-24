@@ -1,6 +1,6 @@
 # change data 15 to 10
 exec { 'update line':
-  commnad => '/usr/bin/sudo /bin/sed -i -e "s/\-n 15/\-n 10000/g" /etc/default/nginx && service nginx restart'
+  commnad => '/usr/bin/sudo /bin/sed -i -e "s/\-n 15/\-n 10240/g" /etc/default/nginx && service nginx restart'
 }
 #exec { 'restart service':
 #  cwd => '/etc/default/',
